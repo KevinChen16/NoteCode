@@ -1,0 +1,11 @@
+/* All styles used in the Quiz View should be defined here. */
+
+.quiz-container {
+    min-height: 600px;
+    min-width: 300px;
+    overflow: scroll;
+}
+
+.quiz-title p {
+    margin-block-end: 0.8em;
+}
