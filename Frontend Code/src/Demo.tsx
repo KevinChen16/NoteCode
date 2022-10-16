@@ -18,9 +18,14 @@ class Demo extends React.Component {
 
     questions: Question[] = [
         {
-            prompt: "Example multiple choice question",
+            prompt: "Example short response question1",
             subtitle: null,
-            question_type: "multiple_choice"
+            question_type: "short_response"
+        },
+        {
+            prompt: "Example short response question2",
+            subtitle: null,
+            question_type: "short_response"
         }
     ]
 

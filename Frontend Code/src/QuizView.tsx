@@ -1,6 +1,7 @@
 // Use this file to implement the quiz view.
 
 import React from 'react';
+import { TextField } from "@material-ui/core"
 import MarkdownTextView from './Components/MarkdownTextView';
 import { Question, QuizMetadata } from './Data Structures';
 import './QuizView.css'
@@ -29,15 +30,24 @@ class QuizView extends React.Component<QuizViewProps, QuizViewState> {
         // Here is an example of how you can insert a variable number of elements into a page
         let questions: JSX.Element[] = []
 
-        for (let i = 0; i < 10; i++) {
-            questions.push(<div style={{padding: '10px', margin: '10px 0', border: '1px dashed lightgray'}}>{`Example question ${i+1}`}</div>)
-        }
+        questions.push(<div className='quiz-shortresponse'>
+            <TextField
+            label="What is your name?"
+            variant='outlined'
+            />
+        </div>)
+
+        questions.push(<div className='quiz-shortresponse'>
+            <TextField
+            label="Where are you from?"
+            variant='outlined'
+            />
+        </div>)
 
         return (
             <div className='quiz-container'>
                 <h2 className='quiz-title'><MarkdownTextView rawText={this.props.metadata.quiz_title} /></h2>
                 <MarkdownTextView rawText={this.props.metadata.quiz_subtitle || undefined} />
-                
                 {questions}
             </div>
 
